@@ -26,7 +26,7 @@ class BubbleGame {
 
   // Generate random number
   randomNum() {
-    return Math.floor(Math.random() * 100);
+    return Math.floor(Math.random() * 50);
   }
 
   // Fill bubbles initially
