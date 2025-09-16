@@ -5,9 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="w-full h-screen bg-[#0780b7] flex items-center justify-center">
+    <div id="main" class="w-[80%] h-[90%] bg-white rounded-xl overflow-hidden">
+        <div id="panelTop" class="h-[14%] bg-[#054e63] flex justify-between items-center px-44">
+            <!-- hit box -->
+            <div class="flex items-center gap-4">
+                <p class="text-white text-xl">Hit</p>
+                <div id="hitBox"
+                    class="bg-white text-[#054e63] flex justify-center items-center text-xl font-bold w-[40px] h-[40px] rounded-md">
+                    0
+                </div>
+            </div>
+
+            <!-- timer box -->
+            <div class="flex items-center gap-4">
+                <p class="text-white text-xl">Timer</p>
+                <div id="hitBox"
+                    class="bg-white text-[#054e63] flex justify-center items-center text-xl font-bold w-[40px] h-[40px] rounded-md">
+                    60
+                </div>
+            </div>
+
+            <!-- score box -->
+            <div class="flex items-center gap-4">
+                <p class="text-white text-xl">Score</p>
+                <div id="hitBox"
+                    class="bg-white text-[#054e63] flex justify-center items-center text-xl font-bold w-[40px] h-[40px] rounded-md">
+                    10
+                </div>
+            </div>
+        </div>
+        <div id="gameWindow" class="p-4 grid grid-cols-19">
+            <div id="numBox"
+                class="w-[50px] h-[50px] bg-[#054e63] flex justify-center items-center text-white text-xl rounded-full">
+                0</div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 
