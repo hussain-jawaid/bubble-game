@@ -6,14 +6,14 @@ class BubbleGame {
 
     this.score = 0;
     this.timeLeft = 60;
-    this.hit = 0;
     this.bubbles = [];
 
     this.generateRandomNums();
+    this.runTimer();
   }
 
   generateRandomNums() {
-    this.bubbles = Array.from({ length: 152 }, () =>
+    this.bubbles = Array.from({ length: 144 }, () =>
       Math.floor(Math.random() * 100)
     );
     this.createBubbles();
@@ -30,6 +30,22 @@ class BubbleGame {
       numBox.textContent = val;
       gameWindow.appendChild(numBox);
     });
+  }
+
+  checkUserHit() {}
+
+  runTimer() {
+    this.timerBox.textContent = this.timeLeft;
+    const timer = setInterval(() => {
+      this.timeLeft -= 1;
+      this.timerBox.textContent = this.timeLeft;
+      if (this.timeLeft === 0) {
+        clearInterval(timer);
+        document.getElementById(
+          "gameWindow"
+        ).innerHTML = `<h1 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl font-bold text-center text-[#054e63]">Game Over!</h1>`;
+      }
+    }, 1000);
   }
 }
 
